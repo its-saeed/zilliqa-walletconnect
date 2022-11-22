@@ -65,7 +65,7 @@ const Home: NextPage = () => {
     web3Provider.getSigner().sendTransaction({
       to: toAddress,
       value: amount,
-    }).then(p => console.log(p)).catch(e=>console.log(`khaaaaaaaar: ${e}`));
+    }).then((p: any) => console.log(p)).catch((e: any)=>console.log(`Error: ${e}`));
   }
 
   const onClickDisconnect = () => {
