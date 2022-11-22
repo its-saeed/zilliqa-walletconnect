@@ -105,12 +105,12 @@ const Home: NextPage = () => {
           <form onSubmit={onSendTransaction}>
           <FormControl>
           <FormLabel htmlFor='amount'>Amount: </FormLabel>
-            <NumberInput defaultValue={amount} min={10} max={1000} onChange={handleChange}>
+            <NumberInput defaultValue={amount} min={10} onChange={handleChange}>
               <NumberInputField />
             </NumberInput>
             <FormLabel htmlFor='toaddress'>To address: </FormLabel>
             <Input id="toaddress" defaultValue={toAddress} type="text" required  onChange={(e) => setToAddress(e.target.value)} my={3}/>
-            <Button isDisabled={!currentAccount} onClick={onSendTransaction}>Transfer</Button>
+            <Button isDisabled={!currentAccount} colorScheme='facebook' onClick={onSendTransaction}>Transfer</Button>
           </FormControl>
           </form>
         </Box>
